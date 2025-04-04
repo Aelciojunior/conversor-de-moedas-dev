@@ -3,79 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ketto programs Convert Money</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Doto:wght@100..900&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rock+Salt&family=Rubik+Wet+Paint&family=Unlock&display=swap" rel="stylesheet">
-
-    
+    <title>Ketto Programs - Convert Money</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/icon-site.ico" type="image/x-icon">
 </head>
 <body>
     <img class="logo" src="assets/logo.gif" alt="logo-dev-club-convert">
     <main>
-       <label>
-        Converter <b>de</b>
-        <select class="currency-option">
-            <option>
-                R$ Real Brasileiro
-            </option>
-            <option>
-                US$ Dolár americano
-            </option>
-            <option>
-                € Euro
-            </option>
+        <label>
+            Converter <b>de</b>
+            <select class="currency-option">
+                <option value="dolar">US$ Dólar Americano</option>
+                <option value="euro">€ Euro</option>
+                <option value="quetzal">GTQ Quetzal</option>
+                <option value="libra">£ Libra Esterlina</option>
+                <option value="real">R$ Real Brasileiro</option>
+            </select>
+        </label>
 
-            <option>GTQ Quetzal guatemalteco</option>
-            
-            <option>£ Libra esterlina</option>
-        </select>
+        <label>
+            Converter <b>para</b>
+            <select class="currency-select">
+                <option value="dolar">US$ Dólar Americano</option>
+                <option value="euro">€ Euro</option>
+                <option value="quetzal">GTQ Quetzal</option>
+                <option value="libra">£ Libra Esterlina</option>
+                <option value="real">R$ Real Brasileiro</option>
+                
+            </select>
+        </label>
 
-       </label>
+        <label>
+            Valor
+            <input class="input-currency" placeholder="Valor" type="text">
+        </label>
 
-       <label>
-        Converter <b>para</b>
-        <select class="currency-select">
-            <option value="dolar">US$ Dólar americano</option>
-            <option value="euro">€ Euro</option>
-            <option value="quetzal"> GTQ Quetzal guatemalteco</option>
-            <option value="libra">£ Libra esterlina </option>
-        </select>
-    </label>
-
-    <label>
-        valor
-        <input class="input-currency" placeholder="R$ 10.000,00"></label>
-        
         <button class="convert-button">Converter</button>
 
         <section>
             <div class="currency-box">
-                <img src="assets/brasil 2.png" alt="moeda-a-converter">
-                <p class="currency">Real</p>
-                
-                <p class="currency-value-to-convert">R$ 0,00</p>
-
-
+                <img class="currency-img" src="assets/estados-unidos1.png" alt="moeda-origem">
+                <p class="currency" id="currency-name-origin">Dólar</p>
+                <p class="currency-value-to-convert">US$ 0,00</p>
             </div>
 
             <img class="arrow-img" src="assets/vector.png" alt="seta">
 
             <div class="currency-box">
-                <img class="currency-img" src="assets/estados-unidos1.png" alt="moeda-convertida">
-                <p class="currency" id="currency-name">Dólar</p>
-
-                <p class="currency-value">US$ 0.0</p>
-                
-
+                <img class="currency-img" src="assets/euro.png" alt="moeda-destino">
+                <p class="currency" id="currency-name-destination">Euro</p>
+                <p class="currency-value">€ 0,00</p>
             </div>
         </section>
-    
     </main>
-    
-    
+
+    <script src="scripts.js"></script>
 </body>
-<script src="scripts.js"></script>
+
 
 </html>
